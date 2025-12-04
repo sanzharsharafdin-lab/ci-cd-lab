@@ -1,1 +1,10 @@
-print("Hello from Python app!")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from Python Flask App!"
+
+if __name__ == "__main__":
+    app.run()
